@@ -1,0 +1,147 @@
+{% extends 'base.html.twig' %}
+{% block title%} Liste des admins{% endblock %}
+
+{% block body %}
+ <nav class="navbar navbar-expand-lg navbar-red bg-red">
+            <div class="container">
+               
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                </div>
+            </div>
+        </nav>
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Welcome to devoteam!</h1>
+                    
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="data:image/png;base64,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" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-muted">August 11, 2022</div>
+                            <h2 class="card-title">About Us</h2>
+                            <p class="card-text">
+Devoteam is a leading consulting firm focused on digital strategy, tech platforms and cybersecurity.
+By combining creativity, tech and data insights, we empower our customers to transform their business and unlock the future!</p>
+                            <a class="btn btn-danger" href="#!">Read more →</a>
+                        </div>
+                    </div>
+                    <!-- Nested row for non-featured blog posts-->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://i0.wp.com/www.recruter.tn/wp-content/uploads/2018/04/12002779_10156270464460643_7063182558435036436_n.png?fit=180%2C180&ssl=1" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">August 11, 2022</div>
+                                    <h2 class="card-title h4">Chef de Projet Infrastructure Tunisie</h2>
+                                    <p class="card-text">Présent dans 18 pays d’Europe et du Moyen-Orient et fort de 25 ans d’expérience, nous mettons la “Technologie au service de l’Homme” afin de construire un monde plus humain et plus durable..</p>
+                                    <a class="btn btn-danger" href="#!">Read more →</a>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://i0.wp.com/www.recruter.tn/wp-content/uploads/2018/04/12002779_10156270464460643_7063182558435036436_n.png?fit=180%2C180&ssl=1" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">January 1, 2022</div>
+                                    <h2 class="card-title h4">Consultant Sécurité</h2>
+                                    <p class="card-text">Devoteam Tunisie recrute des Consultants
+Sécurité pour des missions en NearShore pour nos clients basés en France.</p>
+                                    <a class="btn btn-danger" href="#!">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://i0.wp.com/www.recruter.tn/wp-content/uploads/2018/04/12002779_10156270464460643_7063182558435036436_n.png?fit=180%2C180&ssl=1" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">January 1, 2022</div>
+                                    <h2 class="card-title h4">Ingénieurs Système Linux</h2>
+                                    <p class="card-text">Nous appartenons à unGroupe international reconnu sur le marché du conseil et de l’intégration des Services IT. Nous accompagnons nos clients dans leurs programmes de transformation IT dans tous les secteurs et les activités confondus.</p>
+                                    <a class="btn btn-danger" href="#!">Read more →</a>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://i0.wp.com/www.recruter.tn/wp-content/uploads/2018/04/12002779_10156270464460643_7063182558435036436_n.png?fit=180%2C180&ssl=1" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">January 1, 2022</div>
+                                    <h2 class="card-title h4">Ingénieur système Windows</h2>
+                                    <p class="card-text">
+Nous appartenons à un Groupe international reconnu sur le marché du conseil et de l’intégration des Services IT. Nous accompagnons nos clients dans leurs programmes de transformation IT dans tous les secteurs et les activités confondus.
+.</p>
+                                    <a class="btn btn-danger" href="#!">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination-->
+                    <nav aria-label="Pagination">
+                        <hr class="my-0" />
+                        <ul class="pagination justify-content-center my-4">
+                            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
+                            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                            <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">15</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">Older</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Search widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Search</div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                                <button class="btn btn-danger" id="button-search" type="button">Go!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Categories widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Categories</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">Web Design</a></li>
+                                        <li><a href="#!">HTML</a></li>
+                                        <li><a href="#!">Freebies</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">JavaScript</a></li>
+                                        <li><a href="#!">CSS</a></li>
+                                        <li><a href="#!">Tutorials</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Side Widget</div>
+                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+{% block title%} Dashboard{% endblock %}
+
+{% block body %}
+
+
+
+  <header class="bg-danger py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    
+                    <p class="lead fw-normal text-white-50 mb-0"></p>
+                </div>
+            </div>
+        </header>
+ <div class="content">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 mr-auto">
+          <h3 class="mb-3">Let's work together</h3>
+          
+        </div>
+
+        <div class="col-md-6">
+          <div class="box">
+            <h3 class="heading">New Project</h3>
+            <form class="mb-5" method="post" id="contactForm" name="contactForm">
+              <div class="row">
+                
+                <div class="col-md-6 form-group">
+                  <label for="name" class="col-form-label">id Project *</label>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Your id">
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="name" class="col-form-label">Organization*</label>
+                  <input type="text" class="form-control" name="organization" id="organization" placeholder="Your organization">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="email" class="col-form-label">Email *</label>
+                  <input type="text" class="form-control" name="email" id="email" placeholder="Your email address">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="message" class="col-form-label">Project Description *</label>
+                  <textarea class="form-control" name="message" id="message" cols="30" rows="7"></textarea>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6 form-group">
+                  <label for="budget" class="col-form-label">Budget</label>
+                  <select class="custom-select" id="budget" name="budget">
+    <option selected>Choose...</option>
+    <option value="$1000 below">< $1,000</option>
+    <option value="$2,000 - $5,000">$2,000 - $5,000</option>
+    <option value="$5,000 - $15,000">$5,000 - $15,000</option>
+    <option value="$15,000 - $25,000">$15,000 - $25,000</option>
+    <option value="$25,000 >">$25,000 ></option>
+  </select>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="message" class="col-form-label">Date début </label>
+                  <input type="text" class="form-control" name="date" id="date" placeholder="Example: January 15th">
+
+                  <label for="message" class="col-form-label">Date fin </label>
+                  <input type="text" class="form-control" name="date" id="date" placeholder="Example: January 15th">
+
+
+               
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <input type="submit" value="Ajouter" class="btn btn-block btn-danger rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+              </div>
+            </form>
+
+            <div id="form-message-warning mt-4"></div> 
+            <div id="form-message-success">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    
+    
+
+{% endblock %}
